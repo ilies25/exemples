@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document de test 01</title>
+</head>
+<body>
 
+    <h3>Formulaire d'inscription</h3>
+    
+    <center>
+        <form style="width: 60%;">            
+            <input type="text" placeholder="Nom" required size="30" maxlength="30">
+
+            <hr>
+
+            <input type="text" placeholder="Prénom" required>
+
+            <hr>
+
+            <input type="email" placeholder="Email">
+
+            <hr>
+
+            <input type="password" placeholder="Mot de passe">
+
+            <hr>
+
+            <input type="date" placeholder="Date de naissance" required>
+            
+            <hr>
+            
+            <input type="number" placeholder="Age" disabled>
+            
+            <hr>
+            
+            <label>Wilaya</label>
+            <select>
+                <option hidden>-- Choisir votre wilaya --</option>
+                <option>Oran</option>
+                <option disabled>Setif</option>
+                <option>Alger</option>
+                <option>Tiaret</option>
+            </select>
+            
+            <hr>
+
+            <label><b>Genre</b></label><br>
+            <label>
+                Homme <input type="radio" name="genre">
+            </label>
+            <label>
+                Femme <input type="radio" name="genre">
+            </label> 
+            
+            <hr>
+
+            <label><b>Formations</b></label><br>
+            Dev web         <input type="checkbox"><br>
+            Bases de données<input type="checkbox"><br>
+            Design          <input type="checkbox"><br>
+            
+            
+            <hr>
+
+            <label>Vos remarques</label><br>
+            <textarea rows="10" cols="50"></textarea>
+
+            <hr>
+
+            <button>Enregistrer</button>
+        </form>
+    </center>
+
+</body>
+</html>
