@@ -1,16 +1,112 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document de test 01</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        h3 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="date"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 8px;
+            cursor: pointer;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #eee;
+            margin: 20px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        input[type="number"]:disabled {
+            background-color: #f0f0f0;
+            cursor: not-allowed;
+        }
+    </style>
 </head>
+
 <body>
 
+    <!-- Exemple de formulaire HTML -->
+
     <h3>Formulaire d'inscription</h3>
-    
+
     <center>
-        <form style="width: 60%;">            
+        <form style="width: 60%;">
             <input type="text" placeholder="Nom" required size="30" maxlength="30">
 
             <hr>
@@ -28,13 +124,13 @@
             <hr>
 
             <input type="date" placeholder="Date de naissance" required>
-            
+
             <hr>
-            
+
             <input type="number" placeholder="Age" disabled>
-            
+
             <hr>
-            
+
             <label>Wilaya</label>
             <select>
                 <option hidden>-- Choisir votre wilaya --</option>
@@ -43,7 +139,7 @@
                 <option>Alger</option>
                 <option>Tiaret</option>
             </select>
-            
+
             <hr>
 
             <label><b>Genre</b></label><br>
@@ -52,16 +148,16 @@
             </label>
             <label>
                 Femme <input type="radio" name="genre">
-            </label> 
-            
+            </label>
+
             <hr>
 
             <label><b>Formations</b></label><br>
-            Dev web         <input type="checkbox"><br>
+            Dev web <input type="checkbox"><br>
             Bases de données<input type="checkbox"><br>
-            Design          <input type="checkbox"><br>
-            
-            
+            Design <input type="checkbox"><br>
+
+
             <hr>
 
             <label>Vos remarques</label><br>
@@ -74,4 +170,5 @@
     </center>
 
 </body>
+
 </html>
