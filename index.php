@@ -48,7 +48,7 @@
     <form method="post">
         Nom <input type="text" name="nom" required value="<?= $nom ?>"><br><br>
         Prénom <input type="text" name="prenom" required value="<?= $prenom ?>"><br><br>
-        Age <input type="number" name="age" required><br><br>
+        Age <input type="number" name="age" min="18" max="100" step="5" required><br><br>
 
         <button>Envoyer</button>
     </form>
