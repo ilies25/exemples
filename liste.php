@@ -1,8 +1,10 @@
+<?php require 'back/liste.php' ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Home page</title>
+    <title>Liste</title>
     <link rel="stylesheet" href="style.css">    
     <style>
         form {
@@ -19,6 +21,10 @@
 <body>
     <img src="ressources/logo.jpg" alt="logo" width="50px">
     <?= $msg ?? '' ?>
-    <h2>Home page</h2>
+    <h2>Liste</h2>
+    <ul>
+        <li>nom prénom</li>
+    </ul>
+    
 </body>
 </html>
