@@ -7,10 +7,5 @@
         exit;
     }
 
-    $retour = db->query('
-        UPDATE clients
-        SET statut = -1
-        WHERE id = ' . $id . '
-    ');
-    
+    Client::delete($id);
     header('Location: ' . url . '/clients/liste?d=1');

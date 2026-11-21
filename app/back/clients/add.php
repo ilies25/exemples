@@ -6,13 +6,7 @@
 
     if ($nom !== '')
     {
-        // envoie cette demande à MYSQL
-        $retour = db->query('
-            INSERT INTO clients (nom, telephone, adresse)
-            VALUES ("' . $nom . '", "' . $tel . '", "' . $adr . '")
-        ');
-
-        // redirection vers la liste des clients
+        Client::add($nom, $tel, $adr);
         header('Location: ' . url . '/clients/liste');
     }
 

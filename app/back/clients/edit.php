@@ -14,30 +14,13 @@
     // appliquer nouvelle version des données
     if ($nom !== '')
     {
-        // save new copy
-        $retour = db->query('
-            UPDATE clients
-            SET
-                nom = "' . $nom . '",
-                telephone = "' . $tel . '",
-                adresse = "' . $adr . '"
-            WHERE id = ' . $id . '
-        ');
-
-        // redirection vers la liste des clients
+        Client::edit($id, $nom, $tel, $adr);
         header('Location: ' . url . '/clients/liste');
         exit;
     }
     else // afficher ancienne version des données
     {
-        // envoie cette demande à MYSQL
-        $retour = db->query('
-            SELECT nom, telephone, adresse
-            FROM clients
-            WHERE id = ' . $id . '
-        ');
-    
-        $client = $retour->fetch(PDO::FETCH_OBJ);
+        $client = Client::get($id);
     }
 
     $title = 'Modifier un client';

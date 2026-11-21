@@ -14,10 +14,18 @@
 
     // déclaration de variable constantes utiles dans le projet
     {
+        define('app', __DIR__ . '/app');
         define('back', __DIR__ . '/app/back');
         define('views', __DIR__ . '/app/views');
         define('url', 'http://localhost/formation');
     }
+
+    // autoloader pour charger les class automatiquement sans "require"
+    spl_autoload_register(function ($class) {
+		if (file_exists($file = app . '/class/' . $class . '.php')) {
+			require $file;
+		}
+	});
 
     // cas d'url vide --> accueil
     if ($objet === '' and $action === '') {
